@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "build": "tsc -p ./tsconfig.json",
+    "start": "node --max-old-space-size=20000 build/start.ts",
+    "clean": "rm -rf build"
   },
   "repository": {
     "type": "git",
@@ -17,10 +20,16 @@
   },
   "homepage": "https://github.com/lucasfrotam/api-basic-structure#readme",
   "dependencies": {
-    "@types/express": "^4.17.6",
-    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.14",
-    "nodemon": "^2.0.4"
+    "mongodb": "^3.5.9",
+    "ts-node": "^8.10.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.4",
+    "@types/mongodb": "^3.5.4",
+    "@types/node": "^13.11.0",
+    "nodemon": "^2.0.3",
+    "typescript": "^3.8.3"
   }
 }
