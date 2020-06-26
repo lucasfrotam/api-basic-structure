@@ -5,9 +5,7 @@ export class MongoService implements MongoController {
   private mongoClient: MongoClient;
   private mongoDb: Db;
 
-  constructor(
-    private mongoURI: string
-  ) { }
+  constructor(private mongoURI: string) { }
 
   connectToMongo = async (): Promise<void> => {
     try {
@@ -17,23 +15,23 @@ export class MongoService implements MongoController {
       console.log(`Failed to connect to mongo. ${e.message}`);
     }
     this.mongoDb = this.mongoClient.db();
-  }
+  };
 
   createColletion = async (collectionName: string, options?: CollectionCreateOptions): Promise<Collection> => {
     return await this.mongoDb.createCollection(collectionName, options);
-  }
+  };
 
   getColletion = async (collectionName: string): Promise<Collection> => {
     return await this.mongoDb.collection(collectionName);
-  }
+  };
 
   dropAll = async (): Promise<void> => {
     await this.mongoDb.dropDatabase();
-  }
+  };
 
   disconnect = async (): Promise<void> => {
     await this.mongoClient.close();
-  }
+  };
 
   status = async (): Promise<boolean> => {
     try {
@@ -43,5 +41,5 @@ export class MongoService implements MongoController {
       console.log(e);
     }
     return false;
-  }
+  };
 }

@@ -3,7 +3,7 @@ import { MongoController } from '../mongo/mongo.controller';
 
 export abstract class Repository<T> {
   private collection: Collection<T>;
-  constructor(private mongo: MongoController, readonly collectionName: string) { }
+  constructor(private mongo: MongoController, readonly collectionName: string) {}
 
   public async init(postInit?: (collection: Collection<T>) => Promise<void>): Promise<void> {
     this.collection = await this.mongo.getColletion(this.collectionName);

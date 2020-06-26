@@ -14,9 +14,9 @@ interface AppConfig {
 export const APP_CONFIG: AppConfig = {
   api: {
     host: process.env.API_HOST || '0.0.0.0',
-    port: Number(process.env.API_PORT) || 8080
+    port: Number(process.env.API_PORT) || 8080,
   },
   mongoDb: {
-    uri: process.env.MONGODB_URI
-  }
+    uri: process.env.MONGODB_URI,
+  },
 };

@@ -3,14 +3,14 @@ import { DataService } from './data.service';
 import { BadRequestError, ServiceUnavailableError, NotFoundError } from '../../common/base/error';
 
 export class DataController {
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   router = (): express.Router => {
     const router = express.Router();
     router.get('/data', this.getAllData);
     router.get('/data/:id', this.getItemById);
     return router;
-  }
+  };
 
   getItemById = async (
     req: express.Request,
@@ -34,7 +34,7 @@ export class DataController {
       next(new ServiceUnavailableError(e.message));
       return;
     }
-  }
+  };
 
   getAllData = async (
     req: express.Request,
@@ -50,5 +50,5 @@ export class DataController {
       next(new ServiceUnavailableError(e.message));
       return;
     }
-  }
+  };
 }

@@ -10,10 +10,10 @@ export class DataRepository extends Repository<Item> {
   findItemById = async (id: string): Promise<Item> => {
     const item = await this.findOne({ _id: id });
     return item;
-  }
+  };
 
   getAllData = async (): Promise<Item[]> => {
     const data = await this.findAll();
     return data.toArray();
-  }
+  };
 }
