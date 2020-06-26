@@ -1,6 +1,6 @@
 import { MongoController } from '../../common/mongo';
 import { Repository } from '../../common/repository/repository';
-import { Item } from '../../common/model/item.model'
+import { Item } from '../../common/model/item.model';
 
 export class DataRepository extends Repository<Item> {
   constructor(mongo: MongoController) {

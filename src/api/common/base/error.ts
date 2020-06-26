@@ -1,7 +1,7 @@
 export class BaseError extends Error {
   constructor(public code: number, message: string) {
     super(message);
-    Object.setPrototypeOf(this, HttpResponseError.prototype);
+    Object.setPrototypeOf(this, BaseError.prototype);
   }
 }
 

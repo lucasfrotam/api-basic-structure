@@ -25,8 +25,11 @@ export class DataController {
 
     try {
       const item = await this.dataService.findItemById(id);
-      if (item) res.status(200).send(item);
-      else next(new NotFoundError('No record found with this ID'));
+      if (item) {
+        res.status(200).send(item);
+      } else {
+        next(new NotFoundError('No record found with this ID'));
+      }
     } catch (e) {
       next(new ServiceUnavailableError(e.message));
       return;

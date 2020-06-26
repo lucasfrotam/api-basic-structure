@@ -8,7 +8,7 @@ interface AppConfig {
   };
   mongoDb: {
     uri: string;
-  }
+  };
 }
 
 export const APP_CONFIG: AppConfig = {

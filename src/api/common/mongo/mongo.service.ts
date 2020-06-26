@@ -44,4 +44,4 @@ export class MongoService implements MongoController {
     }
     return false;
   }
-};
+}

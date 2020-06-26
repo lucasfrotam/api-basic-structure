@@ -1,5 +1,5 @@
 import { DataRepository } from './data.repository';
-import { Item } from '../../common/model/item.model'
+import { Item } from '../../common/model/item.model';
 
 export class DataService {
   constructor(private dataRepository: DataRepository) { }

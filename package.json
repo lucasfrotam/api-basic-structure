@@ -7,7 +7,9 @@
     "dev": "nodemon",
     "build": "tsc -p ./tsconfig.json",
     "start": "node --max-old-space-size=20000 build/start.ts",
-    "clean": "rm -rf build"
+    "clean": "rm -rf build",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint:fix": "tslint -c tslint.json -p tsconfig.json --fix"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "@types/mongodb": "^3.5.4",
     "@types/node": "^13.11.0",
     "nodemon": "^2.0.3",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "tslint": "^6.1.2"
   }
 }

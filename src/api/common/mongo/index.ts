@@ -1,2 +1,2 @@
-export * from './mongo.controller'
-export * from './mongo.service'
+export * from './mongo.controller';
+export * from './mongo.service';
