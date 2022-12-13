@@ -25,7 +25,7 @@
   "homepage": "https://github.com/lucasfrotam/api-basic-structure#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongodb": "^3.5.9",
     "ts-node": "^8.10.2"
   },
